@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Script that runs an app with Flask framework """
-from flask import Flask
+from flask import Flask, render_template
 
 
 app = Flask(__name__)
@@ -37,7 +37,13 @@ def python_txt(text='is cool'):
 @app.route('/number/<int:n>', strict_slashes=False)
 def number(n):
     """ Function called with /number/<n> route """
-    return '{:d}'.format(n)
+    return '{:d} is a number'.format(n)
+
+
+@app.route('/number_template/<int:n>', strict_slashes=False)
+def number_template(n):
+    """ Function called with /number_template/<n> route """
+    return render_template("5-number.html", num=n)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
