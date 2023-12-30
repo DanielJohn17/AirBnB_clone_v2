@@ -62,3 +62,7 @@ class FileStorage:
             with open(FileStorage.__file_path, 'r') as f:
                 for key, value in json.load(f).items():
                     self.new(classes_dct[value['__class__']](**value))
+
+    def close(self):
+        """ calls relode() """
+        self.reload()
