@@ -23,7 +23,8 @@ class FileStorage:
             del self.__objects[key]
 
     def new(self, obj):
-        """  deletes obj from __objects if it’s inside - if obj is equal to None """
+        """  deletes obj from __objects if its inside
+        - if obj is equal to None """
         key = "{}.{}".format(type(obj).__name__, obj.id)
         if obj:
             del self.__objects[key]
