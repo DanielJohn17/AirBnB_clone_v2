@@ -12,7 +12,7 @@ class FileStorage:
     def all(self, cls=None):
         """ Returns the dictionary __objects """
         return FileStorage.__objects
-    
+
     def delete(self, obj=None):
         """deletes obj from __objects if it's inside
         Args:
