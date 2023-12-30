@@ -20,14 +20,14 @@ def hbnb():
 
 @app.route('/c/<text>', strict_slashes=False)
 def c(text):
-    """ Function called with /hbnb route """
+    """ Function called with /c/<text> route """
     return 'C {}'.format(text.replace('_', ' '))
 
 
 @app.route('/python/', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def python_txt(text='is cool'):
-    """ Function called with /hbnb route """
+    """ Function called with /python route """
     if text is not 'is cool':
         return 'Python {}'.format(text.replace('_', ' '))
     else:
