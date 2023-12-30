@@ -37,7 +37,7 @@ def python_txt(text='is cool'):
 @app.route('/number/<int:n>', strict_slashes=False)
 def number(n):
     """ Function called with /number/<n> route """
-    return '{:d}'.format(n)
+    return '{:d} is a number'.format(n)
 
 
 if __name__ == "__main__":
